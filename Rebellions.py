@@ -83,7 +83,6 @@ light_laser = pygame.image.load('assets/images/purple_fire.png')
 green_crab = pygame.image.load('assets/images/triangle-1.png')
 green_crab2 = pygame.image.load('assets/images/triangle-2.png')
 green_crab3 = pygame.image.load('assets/images/triangle-3.png')
-green_crab_hit = pygame.image.load('assets/images/triangle-4.png')
 #Primary Enemy 
 red_bat = pygame.image.load('assets/images/red_troop-1.png')
 red_bat2 = pygame.image.load('assets/images/red_troop-2.png')
@@ -222,12 +221,11 @@ class Mob(pygame.sprite.Sprite):
             self.image, self.image2, self.image3, self.image4, self.image5 = self.image2, self.image3, self.image4, self.image5, self.image
 
 class Mob2(pygame.sprite.Sprite):
-    def __init__(self, x, y, image, image2, image3, image4):
+    def __init__(self, x, y, image, image2, image3):
         super().__init__()
         self.image = image
         self.image2 = image2
         self.image3 = image3
-        self.image4 = image4
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -250,7 +248,6 @@ class Mob2(pygame.sprite.Sprite):
             # I need help with this
             # This is suppose to change the character
             #showing the character is hurt
-            self.image4
             print("*clink" + str(self.shield) + "*")
             
 
@@ -396,9 +393,9 @@ def setup():
     mob4 = Mob(573, 74, red_bat, red_bat2, red_bat3, red_bat4, red_bat5)
     mob5 = Mob(701, 74, red_bat, red_bat2, red_bat3, red_bat4, red_bat5)
     mob6 = Mob(829, 74, red_bat, red_bat2, red_bat3, red_bat4, red_bat5)
-    mob7 = Mob2(120, -100, green_crab, green_crab2, green_crab3, green_crab_hit)
-    mob8 = Mob2(701, -100, green_crab, green_crab2, green_crab3, green_crab_hit)
-    mob9 = Mob2(410, -100, green_crab, green_crab2, green_crab3, green_crab_hit)
+    mob7 = Mob2(120, -100, green_crab, green_crab2, green_crab3)
+    mob8 = Mob2(701, -100, green_crab, green_crab2, green_crab3)
+    mob9 = Mob2(410, -100, green_crab, green_crab2, green_crab3)
 
     back1 = Background(0, 0, starry_night, starry_night2, starry_night3, starry_night4)
     
@@ -451,14 +448,11 @@ while not done:
                         pew_shot += 1
                         player.shoot()
                         print("Pew!" + str(pew_shot))
-                if event.key == pygame.K_DELETE:
+                if event.key == pygame.K_x:
                         stage = END
-                    
             elif stage == END:
                 if event.key == pygame.K_DELETE:
                     setup()
-                                    
-            
          
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_LEFT] and stage == PLAYING:
