@@ -1,4 +1,4 @@
-theme: merlot theme
+theme: Jekyll theme set to "Merlot"
 title: Orange Sky Rebellion
 description: One ship broke from the norms and is now facing consequences with the war against his peers
 show_downloads: True
