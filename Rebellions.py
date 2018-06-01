@@ -196,7 +196,7 @@ class Mob(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
-        self.shield = 7
+        self.shield = 4
         self.ticks = 0
 
     def drop_bomb(self):
@@ -230,7 +230,7 @@ class Mob2(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
-        self.shield = 3
+        self.shield = 8
         self.ticks = 0
 
     def drop_bomb(self):
@@ -511,4 +511,3 @@ while not done:
 
 # Close window and quit
 pygame.quit()
-
