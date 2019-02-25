@@ -16,7 +16,7 @@ This mob has 8 lives
 
 ## Red Bat
 ![alt text](https://raw.githubusercontent.com/kccjay/OrangeSkys_Rebellion/master/assets/images/red_troop-3.png "Logo Title Text 1")
-This mob has 4 lives
+This mob has 1 lives
 
 ## An In-game picture
 ![alt text](https://raw.githubusercontent.com/kccjay/OrangeSkys_Rebellion/master/assets/images/This%20is%20a%20gamme%20picture.PNG "Logo Title Text 1")
