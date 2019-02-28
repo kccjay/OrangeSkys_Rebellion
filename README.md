@@ -25,3 +25,6 @@ This mob has 1 lives
 3) To move faster use the "a" and "d" key
 4) To Shoot use the SPACE bar 
 5) The ship only moves on a horizontal
+
+##The website i used for the art
+https://www.piskelapp.com/user/4511694628847616
